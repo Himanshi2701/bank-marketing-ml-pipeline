@@ -33,8 +33,14 @@ the UCI Bank Marketing dataset (45,211 customers, 17 features).
 | Recall (yes) | 81.5% | 85% |
 | F1-score (yes) | 55% | 50% |
 
+## Dashboard
+An interactive Streamlit dashboard (`dashboard.py`) lets you input customer
+details (age, job, balance, contact history, etc.) and get a live
+subscription prediction from the trained Logistic Regression model, along
+with the predicted probability.
+
 ## Tech Stack
-Python, pandas, scikit-learn, Jupyter Notebook
+Python, pandas, scikit-learn, Streamlit, Jupyter Notebook
 
 ## Limitations & Next Steps
 - Dataset size (~45K rows) suits pandas; a larger-scale version could be
@@ -43,5 +49,11 @@ Python, pandas, scikit-learn, Jupyter Notebook
   (Random Forest, XGBoost) to improve precision further.
 
 ## How to Run
+
+**To explore the full pipeline (cleaning, modeling, evaluation):**
 1. `pip install -r requirements.txt`
 2. Open `project.ipynb` in VS Code/Jupyter and run all cells
+
+**To use the interactive dashboard:**
+1. `pip install -r requirements.txt`
+2. `streamlit run dashboard.py`
